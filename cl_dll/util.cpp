@@ -20,22 +20,15 @@
 
 #include <cstdio>
 #include <cstdlib>
-#include <cmath>
 
 #include "hud.h"
 #include "cl_util.h"
 #include <string.h>
 
-#ifndef M_PI
-#define M_PI		3.14159265358979323846	// matches value in gcc v2 math.h
-#endif
-
-vec3_t vec3_origin( 0, 0, 0 );
-
-HSPRITE LoadSprite(const char *pszName)
+HSPRITE LoadSprite(const char* pszName)
 {
 	int i;
-	char sz[256]; 
+	char sz[256];
 
 	if (ScreenWidth < 640)
 		i = 320;
@@ -46,4 +39,3 @@ HSPRITE LoadSprite(const char *pszName)
 
 	return SPR_Load(sz);
 }
-

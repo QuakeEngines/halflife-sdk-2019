@@ -12,9 +12,8 @@
 *   without written permission from Valve LLC.
 *
 ****/
-#ifndef EXTDLL_H
-#define EXTDLL_H
 
+#pragma once
 
 //
 // Global header file for extension DLLs
@@ -23,15 +22,9 @@
 #include "Platform.h"
 
 // Header file containing definition of globalvars_t and entvars_t
-typedef unsigned int func_t;					//
-typedef unsigned int string_t;				// from engine's pr_comp.h;
-typedef float vec_t;				// needed before including progdefs.h
 
 // Vector class
-#include "vector.h"
-
-// Defining it as a (bogus) struct helps enforce type-checking
-#define vec3_t Vector
+#include "mathlib.h"
 
 // Shared engine/DLL constants
 #include "const.h"
@@ -43,5 +36,3 @@ typedef float vec_t;				// needed before including progdefs.h
 
 // Shared header between the client DLL and the game DLLs
 #include "cdll_dll.h"
-
-#endif //EXTDLL_H
